@@ -12,6 +12,7 @@ import { MovieDetailPage } from "../movie-detail/movie-detail";
 export class HomePage {
   movies: MovieModel[];
   user: string;
+  searchQuery: string;
 
   constructor(private moviePrv: MoviesProvider,
               private navParams: NavParams,

@@ -13,6 +13,7 @@ import { MyFavoritesPageModule } from "../pages/my-favorites/my-favorites.module
 import { MoviesProvider } from '../providers/movies/movies';
 import { LoginPageModule } from "../pages/login/login.module";
 import { MovieDetailPageModule } from "../pages/movie-detail/movie-detail.module";
+import { PipesModule } from "../pipes/pipes.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MovieDetailPageModule } from "../pages/movie-detail/movie-detail.module
     ComponentsModule,
     MyFavoritesPageModule,
     LoginPageModule,
-    MovieDetailPageModule
+    MovieDetailPageModule,
+    PipesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,12 +1,16 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Bienvenido, {{user}}</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar
+      [(ngModel)]="searchQuery"
+      [animated]="true"
+      [showCancelButton]="true"
+      placeholder="Buscar película por título, genero"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let m of movies" tappable (click)="openMovieDetail(m)">
+    <ion-item *ngFor="let m of movies | filterBy: searchQuery" tappable (click)="openMovieDetail(m)">
       <div class="img-container">
         <img [src]="m.posterUrl">
       </div>

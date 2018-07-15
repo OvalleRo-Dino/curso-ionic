@@ -56,6 +56,47 @@ export class MoviesProvider {
     });
 
     this.movies.push(skyfall);
+
+    this.movies.push(new MovieModel({
+      title: 'Ant-Man and The Wasp',
+      genre: 'Acción y Aventura, Comedia, Fantasía',
+      phrase: {
+        author: 'Rodrigo',
+        quote: 'Divertida'
+      },
+      rating: Ratings.M13,
+      posterUrl: 'https://resizing.flixster.com/RQGuI1bOR6hdZSVlJlrI7toTGTo=/206x305/v1.bTsxMjcyOTQxMjtqOzE3Nzg3OzEyMDA7MTYzODsyMDQ4',
+      availableNow: true,
+      sinopsis: 'In the aftermath of "Captain America: Civil War," Scott Lang (Rudd) grapples with the consequences of his choices as both a Super Hero and a father. As he struggles to rebalance his home life with his responsibilities as Ant-Man, he\'s confronted by Hope van Dyne (Lilly) and Dr. Hank Pym (Douglas) with an urgent new mission. Scott must once again put on the suit and learn to fight alongside The Wasp as the team works together to uncover secrets from their past.',
+      score: 7.9
+    }));
+
+    this.movies.push(new MovieModel({
+      title: 'Mission: Imposible - Fallout',
+      genre: 'Acción, Misterio, Drama',
+      phrase: {
+        quote: 'Best action movie ever',
+        author: 'Variety'
+      },
+      rating: Ratings.M16,
+      posterUrl: 'https://resizing.flixster.com/7hS1cxYjGSiBEktXogs1iCJe6Fg=/206x305/v1.bTsxMjc0MjEwMjtqOzE3Nzg3OzEyMDA7Njk2OzEwMjQ',
+      availableNow: false,
+      sinopsis: 'The best intentions often come back to haunt you. MISSION: IMPOSSIBLE - FALLOUT finds Ethan Hunt (Tom Cruise) and his IMF team (Alec Baldwin, Simon Pegg, Ving Rhames) along with some familiar allies (Rebecca Ferguson, Michelle Monaghan) in a race against time after a mission gone wrong. Henry Cavill, Angela Bassett, and Vanessa Kirby also join the dynamic cast with filmmaker Christopher McQuarrie returning to the helm.',
+      score: 8.5
+    }));
+
+    this.movies.push(new MovieModel({
+      title: 'The Matrix',
+      score: 7.6,
+      phrase: {
+        quote: 'Where other films are done in by the freedom offered by computer effects, The Matrix integrates them beautifully.',
+        author: 'Keith Philipps'
+      },
+      genre: 'Action, Sci-fi',
+      rating: Ratings.M18,
+      availableNow: true,
+      posterUrl: 'https://resizing.flixster.com/EsE5EO3Q2Sw6BSfSBujfprqqcfg=/206x305/v1.bTsxMTE2ODA5NjtqOzE3ODE0OzEyMDA7ODAwOzEyMDA'
+    }))
   }
 
   getMovies(): MovieModel[] {
