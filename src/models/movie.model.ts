@@ -20,6 +20,7 @@ export class MovieModel {
   phrase: Phrase;
   availableNow: boolean;
   posterUrl: string;
+  isFav: boolean;
 
   private _sinopsis: string;
   private _score: number;

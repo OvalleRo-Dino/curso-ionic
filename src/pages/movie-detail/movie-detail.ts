@@ -11,12 +11,14 @@ import { MovieModel } from "../../models/movie.model";
 export class MovieDetailPage {
 
   movie: MovieModel;
+  isFav: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ngOnInit() {
     this.movie = this.navParams.data.movie;
+    this.isFav = this.movie.isFav;
   }
 
   action(actionName: string) {
@@ -27,10 +29,16 @@ export class MovieDetailPage {
       case 'dislike':
         this.movie.userLiked = false;
         break;
+      case 'fav':
+        this.isFav = !this.isFav;
+        break;
       default:
         console.error('Acción incorrecta!');
     }
   }
 
+  ionViewWillLeave() {
+    this.movie.isFav = this.isFav;
+  }
 
 }

@@ -14,6 +14,7 @@
         <h1>{{m.title}}</h1>
         <h4>{{m.genre}}</h4>
       </div>
+      <ion-icon item-end name="star" *ngIf="m.isFav"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>

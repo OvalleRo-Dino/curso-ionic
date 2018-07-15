@@ -5,6 +5,10 @@
       <span class="movie-title">{{movie.title}}</span>
       <span class="movie-score">({{movie.score}}/{{maxScore}})</span>
     </ion-card-title>
+    <button ion-button color="dark" full outline (click)="changeFavs()" icon-start>
+      <ion-icon name="star"></ion-icon>
+      {{isFav ? isFavMsg : isNotFavMsg}}
+    </button>
     <p>
       <span class="movie-rating" [ngClass]="{'not-available-now': !(movie.availableNow)}">{{movie.rating}}</span>
       {{movie.sinopsis}}

@@ -23,6 +23,6 @@ export class HomePage {
   }
 
   openMovieDetail(movie: MovieModel) {
-    this.navCtrl.push(MovieDetailPage, {movie})
+    this.navCtrl.push(MovieDetailPage, {movie});
   }
 }
