@@ -13,6 +13,7 @@ export class TabsPage {
   tab2Root = MyFavoritesPage;
 
   user: any;
+  index = 0;
 
   constructor(public params: NavParams,
               private menuCtrl: MenuController) {
@@ -21,5 +22,6 @@ export class TabsPage {
   ngOnInit() {
     this.user = {user: this.params.data.user};
     this.menuCtrl.enable(true);
+    this.index = this.params.data.index;
   }
 }

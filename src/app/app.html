@@ -2,12 +2,22 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        Hola menú lateral!
+        Mis Películas
       </ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    Hola curso!
+    <ion-list>
+      <button ion-item menuClose *ngFor="let p of pages" (click)="goToTabById(p.index)">
+        <ion-icon [name]="p.iconName" item-start></ion-icon>
+        {{p.page}}
+      </button>
+      <button ion-item menuClose (click)="logout()">
+        <ion-icon name="log-out" item-start>
+        </ion-icon>
+        Cerrar Sesión
+      </button>
+    </ion-list>
   </ion-content>
 </ion-menu>
 <ion-nav #content [root]="rootPage"></ion-nav>
