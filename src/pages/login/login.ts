@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, MenuController, NavController } from 'ionic-angular';
 import { TabsPage } from "../tabs/tabs";
 
 @IonicPage()
@@ -11,7 +11,12 @@ export class LoginPage {
 
   user = {name: '', password: ''};
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              private menuCtrl: MenuController) {
+  }
+
+  ngOnInit() {
+    this.menuCtrl.enable(false);
   }
 
   login() {
